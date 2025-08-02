@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+
+.font-herr {
+  font-family: 'Herr Von Muellerhoff', cursive;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  
+  /* force white color */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  /* background-color: white; */
+  color: black !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); */
+  transition: background 0.3s, transform 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+/* Tailwind yellow-400 */
+  color: white !important;
+  transform: scale(1.1);
+}
