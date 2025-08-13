@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -108,62 +109,73 @@ const Home = () => {
       </div>
 
       <h1 className="text-center text-4xl mt-16 font-semibold">Rooms</h1>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 px-5 lg:px-40 sm:px-20 py-10 bg-gray-100">
-        {[
-          {
-            title: "SUPERIOR",
-            price: "From Rs. 5,000/Night",
-            img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/large_0_76214_uL4gNe6c0b_1.jpg",
-          },
-          {
-            title: "DELUXE",
-            price: "From Rs. 5,000/Night",
-            img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/large_3_76214_2CyQ5XQ6Gb_4.jpg",
-          },
-          {
-            title: "SUITE",
-            price: "From Rs. 7,000/Night",
-            img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/large_0_76215_Wl24DJq1ju_1-1.jpg",
-          },
-          {
-            title: "JUNIOR SUITE",
-            price: "From Rs. 7,500/Night",
-            img: "https://amanivagatorgoa.com/wp-content/uploads/2025/01/first-580x420.jpg",
-          },
-          {
-            title: "PREMIER SUITE",
-            price: "From Rs. 15,000/Night",
-            img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/firstBanner-580x420.jpeg",
-          },
-          {
-            title: "SUPERIOR SUITE",
-            price: "From Rs. 8,500/Night",
-            img: "https://amanivagatorgoa.com/wp-content/uploads/2025/01/first-1-580x420.jpg",
-          },
-        ].map((room, index) => (
-          <div
-            key={index}
-            className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
-          >
-            <img
-              src={room.img}
-              alt={room.title}
-              className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
-            />
-            <div className="p-5">
-              <h3 className="text-2xl font-semibold text-gray-800">
-                {room.title}
-              </h3>
-              <p className="text-gray-600 text-lg mt-1">{room.price}</p>
-            </div>
-            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button className=" text-gray-600 px-4 py-2 italic">
-                Learn More →
-              </button>
-            </div>
-          </div>
-        ))}
+     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 px-5 lg:px-40 sm:px-20 py-10 bg-gray-100">
+  {[
+    {
+      title: "SUPERIOR",
+      price: "From Rs. 5,000/Night",
+      img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/large_0_76214_uL4gNe6c0b_1.jpg",
+      to: "/superiorpage"
+    },
+    {
+      title: "DELUXE",
+      price: "From Rs. 5,000/Night",
+      img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/large_3_76214_2CyQ5XQ6Gb_4.jpg",
+      to : "/deluxpage"
+    },
+    {
+      title: "SUITE",
+      price: "From Rs. 7,000/Night",
+      img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/large_0_76215_Wl24DJq1ju_1-1.jpg",
+      to : "/suitepage"
+    },
+    {
+      title: "JUNIOR SUITE",
+      price: "From Rs. 7,500/Night",
+      img: "https://amanivagatorgoa.com/wp-content/uploads/2025/01/first-580x420.jpg",
+      to: "/superiorpage"
+    },
+    {
+      title: "PREMIER SUITE",
+      price: "From Rs. 15,000/Night",
+      img: "https://amanivagatorgoa.com/wp-content/uploads/2020/11/firstBanner-580x420.jpeg",
+      to : "/deluxpage"
+    },
+    {
+      title: "SUPERIOR SUITE",
+      price: "From Rs. 8,500/Night",
+      img: "https://amanivagatorgoa.com/wp-content/uploads/2025/01/first-1-580x420.jpg",
+      to : "/suitepage"
+    },
+  ].map((room, index) => (
+    <div
+      key={index}
+      className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+    >
+      <img
+        src={room.img}
+        alt={room.title}
+        className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div className="p-5">
+        <h3 className="text-2xl font-semibold text-gray-800">
+          {room.title}
+        </h3>
+        <p className="text-gray-600 text-lg mt-1">{room.price}</p>
       </div>
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+        <Link
+          to={room.to}
+          className=" text-gray-600 px-8 py-1 italic"
+        >
+          Learn More →
+        </Link>
+      </div>
+    </div>
+  ))}
+</div>
+
 
       {/* Reviews Section */}
       <h1 className="text-center text-4xl mt-10 font-semibold">Reviews</h1>
