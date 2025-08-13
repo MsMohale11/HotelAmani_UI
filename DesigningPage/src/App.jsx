@@ -11,6 +11,9 @@ import Contact from './Components/Contact'
 import TermsAndConditions from './Components/TermsandConditions'
 import HouseRules from './Components/HouseRules'
 import Packages from './Components/Packages'
+import SuitePage from './Components/Suite'
+import SuperiorPage from './Components/Superior'
+import DulexPage from './Components/Delux'
 
 
 const App = () => {
@@ -28,6 +31,9 @@ const App = () => {
           <Route path='/termsandconditions' element={<TermsAndConditions/>} />
           <Route path='/house-rules' element={<HouseRules/>} />
           <Route path='/packages' element={<Packages/>} />
+          <Route path='/suitepage' element={<SuitePage/>} />
+          <Route path='/superiorpage' element={<SuperiorPage/>} />
+          <Route path='/dulexpage' element={<DulexPage/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

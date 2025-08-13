@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 .font-herr {
   font-family: 'Herr Von Muellerhoff', cursive;
 }
@@ -33,3 +36,4 @@
   color: white !important;
   transform: scale(1.1);
 }
+

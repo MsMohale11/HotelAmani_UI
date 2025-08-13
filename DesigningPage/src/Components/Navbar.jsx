@@ -55,14 +55,14 @@ const Navbar = () => {
           <button className="ml-4 p-2 rounded-full hover:bg-white/10 transition duration-300">
             <FiSearch className="text-xl" />
           </button>
+
         </div>
       </div>
 
       {/* Mobile menu items */}
       <div
-        className={`md:hidden bg-black px-4 pb-4 transition-all duration-500 ${
-          isOpen ? "block" : "hidden"
-        }`}
+        className={`md:hidden bg-black px-4 pb-4 transition-all duration-500 ${isOpen ? "block" : "hidden"
+          }`}
       >
         {navItems.map((item, i) => (
           <Link

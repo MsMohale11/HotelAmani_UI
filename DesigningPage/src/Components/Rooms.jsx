@@ -102,7 +102,7 @@ const Rooms = () => {
               <p className="text-gray-600 text-lg mt-1">{room.price}</p>
             </div>
             <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button className=" text-gray-600 px-4 py-2 italic">
+              <button className=" text-gray-600 px-8 py-1 italic">
                 Learn More →
               </button>
             </div>

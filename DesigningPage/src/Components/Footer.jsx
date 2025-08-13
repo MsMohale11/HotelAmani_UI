@@ -1,6 +1,7 @@
 import React from "react";
 import { FiFacebook, FiMapPin, FiPhone } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -42,14 +43,26 @@ const Footer = () => {
         
         <div>
           <h2 className="text-lg font-light tracking-widest uppercase mb-4">Quick Links</h2>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li className="border-b border-gray-700 pb-2 hover:text-yellow-500"><a href="/gallery">Gallery</a></li>
-            <li className="border-b border-gray-700 pb-2 hover:text-yellow-500"><a href="/contact">Contact</a></li>
-            <li className="border-b border-gray-700 pb-2 hover:text-yellow-500"><a href="/packages">Packages</a></li>
-            <li className="border-b border-gray-700 pb-2 hover:text-yellow-500"><a href="/tariff">Tariff</a></li>
-            <li className="border-b border-gray-700 pb-2 hover:text-yellow-500"><a href="/house-rules">House Rules</a></li>
-            <li className="border-b border-gray-700 pb-2 hover:text-yellow-500"><a href="/termsandconditions">Terms and Conditions</a></li>
-          </ul>
+        <ul className="space-y-2 text-sm text-gray-300">
+  <li className="border-b border-gray-700 pb-2 hover:text-yellow-500">
+    <Link to="/gallery">Gallery</Link>
+  </li>
+  <li className="border-b border-gray-700 pb-2 hover:text-yellow-500">
+    <Link to="/contact">Contact</Link>
+  </li>
+  <li className="border-b border-gray-700 pb-2 hover:text-yellow-500">
+    <Link to="/packages">Packages</Link>
+  </li>
+  <li className="border-b border-gray-700 pb-2 hover:text-yellow-500">
+    <Link to="/tariff">Tariff</Link>
+  </li>
+  <li className="border-b border-gray-700 pb-2 hover:text-yellow-500">
+    <Link to="/house-rules">House Rules</Link>
+  </li>
+  <li className="border-b border-gray-700 pb-2 hover:text-yellow-500">
+    <Link to="/termsandconditions">Terms and Conditions</Link>
+  </li>
+</ul>
         </div>
 
         {/* Column 4: Social Links */}
